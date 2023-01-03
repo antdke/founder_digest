@@ -22,6 +22,8 @@ IF a user exists, it has a pair to a UserSubmission with status 'approved'
 - job_role
 - user_submission_id # MAYBE
 
+rails g migration AddAttrsToUsers first_name last_name job_role
+
 ## UserSubmissions
 
 IF a submission is approved, we will map (copy/paste) the fields to a User record
@@ -35,6 +37,7 @@ IF a submission is approved, we will map (copy/paste) the fields to a User recor
 - status (pending, approved, rejected)
 - user_id # MAYBE
 
+rails g model UserSubmission email first_name last_name website job_role text status
 ## Digests (aka Newsletters, Stakeholder Updates)
 
 - title (ex: Fomo.com)
@@ -62,3 +65,17 @@ what ARE subscribers? users with relationship to other users
   - Digests
     - StakeholderUpdates
     - Subscriptions
+
+
+# commands
+
+rails g migration <command> (for changing EXISTING tables - ie. add_column, remove_column, update a column)
+
+- ex: rails g migration AddAttrsToUsers first_name last_name job_role
+- usually pluralized with a verb prefix
+
+rails g model <command> (for creating NEW tables)
+
+- ex: rails g model UserSubmission email first_name last_name website job_role text status
+- no plural (model convention), no verb prefix
+- creates the model and the migration file
