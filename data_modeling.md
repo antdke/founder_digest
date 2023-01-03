@@ -50,8 +50,11 @@ rails g model Project title description website avatar_url user:references
 
 ## StakeholderUpdates
 
+- title
 - content (ex: "This month we...")
-- digest_id (which Digest does this update belong to?)
+- project_id (which Digest does this update belong to?)
+
+rails g model StakeholderUpdate title content project:references
 
 ## Subscriptions
 
