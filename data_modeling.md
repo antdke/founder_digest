@@ -52,7 +52,7 @@ rails g model Project title description website avatar_url user:references
 
 - title
 - content (ex: "This month we...")
-- project_id (which Digest does this update belong to?)
+- project_id (which Project does this update belong to?)
 
 rails g model StakeholderUpdate title content project:references
 
@@ -60,17 +60,18 @@ rails g model StakeholderUpdate title content project:references
 
 what ARE subscribers? users with relationship to other users
 
-- digest_id (ex: 4)
+- project_id (ex: 4)
 - user_id (ex: 2)
+
+rails g model Subscription project:references user:references
 
 # Relationships
 
 - Users
   - UserSubmissions
-  - Digests
+  - Projects
     - StakeholderUpdates
     - Subscriptions
-
 
 # commands
 
