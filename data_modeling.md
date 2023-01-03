@@ -38,13 +38,15 @@ IF a submission is approved, we will map (copy/paste) the fields to a User recor
 - user_id # MAYBE
 
 rails g model UserSubmission email first_name last_name website job_role text status
-## Digests (aka Newsletters, Stakeholder Updates)
+## Projects (aka Newsletters, Stakeholder Updates)
 
 - title (ex: Fomo.com)
 - description (ex: Monthly updates from a solo founder)
 - website
 - avatar_url => stringified image: <https://fomo.com/favicon.ico>
 - user_id (ex: 5)
+
+rails g model Project title description website avatar_url user:references
 
 ## StakeholderUpdates
 
