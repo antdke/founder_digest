@@ -56,7 +56,7 @@ rails g model Project title description website avatar_url user:references
 
 rails g model StakeholderUpdate title content project:references
 
-## Subscriptions
+## Subscribers
 
 what ARE subscribers? users with relationship to other users
 
@@ -71,7 +71,7 @@ rails g model Subscription project:references user:references
   - UserSubmissions
   - Projects
     - StakeholderUpdates
-    - Subscriptions
+    - Subscribers
 
 # commands
 
