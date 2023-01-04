@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   end
 
 namespace :admin do
-  
+  get '/', to: 'pages#dashboard'
 end
 
   # # admin panels
