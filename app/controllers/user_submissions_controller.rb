@@ -3,7 +3,7 @@ class UserSubmissionsController < ApplicationController
     puts "WHITELISTED PARAMS: #{user_submission_params}"
     # accept client/form request 
     # create a UserSubmission record
-
+    UserSubmission.create!(user_submission_params)
   end
 
   private
