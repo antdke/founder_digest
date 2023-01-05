@@ -16,7 +16,7 @@
     </div>
     <div class="basis-1/2 text-right">
       <p>{{ Num }} Subscribers</p>
-      <p><a href="#" class="underline">Share update</a></p>
+      <p><a href="/stakeholder_updates/new" class="underline">Share update</a></p>
       <p><a href="#" class="underline">Edit subscription</a></p>
     </div>
   </div>
@@ -24,7 +24,11 @@
 
 <!-- newsletters -->
 
-<div class=" p-5 max-w-3xl mx-auto mt-12">
+
+
+<div class=" p-5 max-w-3xl mx-auto mt-12 space-y-2">
+
+<% 5.times do %>
   <div class="flex">
     <div class="basis-1/2">
       <div class="flex gap-x-2">
@@ -49,4 +53,8 @@
       </div>
     </div>
   </div>
+<% end %>
+
 </div>
+
+
