@@ -1,1 +1,52 @@
-<%= render partial: "shared/heading", locals: { title: 'Dashboard', description: '' } %>
+<%= render partial: 'shared/page_heading', locals: {heading: 'Dashboard', subheading: 'Browse founder updates and upload your own.'} %>
+
+<!-- main box area -->
+<div class="border-2 border-black p-5 max-w-3xl mx-auto">
+  <div class="flex">
+    <div class="basis-1/2">
+      <div class="flex gap-x-2">
+        <div class="basis-1/6">
+          <img src="https://via.placeholder.com/150" alt="">
+        </div>
+        <div class="basis-5/6">
+          <p class="text-lg">{{ Title }}</p>
+          <p class="text-sm">{{ Description }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="basis-1/2 text-right">
+      <p>{{ Num }} Subscribers</p>
+      <p><a href="#" class="underline">Share update</a></p>
+      <p><a href="#" class="underline">Edit subscription</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- newsletters -->
+
+<div class=" p-5 max-w-3xl mx-auto mt-12">
+  <div class="flex">
+    <div class="basis-1/2">
+      <div class="flex gap-x-2">
+        <div class="basis-1/6">
+          <img src="https://via.placeholder.com/150" alt="">
+        </div>
+        <div class="basis-5/6">
+          <p class="text-lg">{{ Title }}</p>
+          <p class="text-sm">{{ Description }} {{ url }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="basis-1/2 text-right">
+      <div class="relative flex items-start">
+        <div class="min-w-0 flex-1 ml-3 text-sm">
+          <label for="subscribed" class="font-medium text-gray-700"> {{ Subscribed Status }} </label>
+        </div>
+        <div class="ml-3 flex h-5 items-center">
+          <input id="subscribed" aria-describedby="subscribed-description" name="subscribed" type="checkbox"
+            class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
