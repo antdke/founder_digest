@@ -4,6 +4,7 @@ class UserSubmissionsController < ApplicationController
     # accept client/form request 
     # create a UserSubmission record
     UserSubmission.create!(user_submission_params)
+    # TODO: redirect to a thank you page
     redirect_to root_path, notice: "Thanks for submitting!"
   end
 
