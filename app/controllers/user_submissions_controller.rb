@@ -11,7 +11,7 @@ class UserSubmissionsController < ApplicationController
   private
 
   def user_submission_params
-    params.require(:user_submission).permit(:first_name, :last_name, :email, :website, :job_role, :text) 
+    params.require(:user_submission).permit(:first_name, :last_name, :email, :website, :job_role, :text, :plan_name) 
   end
   
 end
