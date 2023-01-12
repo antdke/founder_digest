@@ -8,6 +8,10 @@ class UserSubmissionsController < ApplicationController
     redirect_to root_path, notice: "Thanks for submitting!"
   end
 
+  def update 
+    # TODO: update user submission status
+  end
+
   private
 
   def user_submission_params
