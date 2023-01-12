@@ -1,7 +1,7 @@
 <!-- Details / Instructions -->
 <%= render partial: 'shared/page_heading', locals: {heading: 'Apply to Founder Digest!', subheading: 'Each submission is manually reviewed by our team within 24 hours.'} %>
 
-Params: <%= params %>
+<% plan_name = params[:plan] || 'free' %>
 
 <div class="max-w-sm mx-auto">
 
@@ -10,7 +10,7 @@ Params: <%= params %>
       <div class="space-y-8 divide-y divide-gray-200">
 
         <!-- Plan (hidden) -->
-        <input type="hidden" id="user_submission_plan_name" name="user_submission[plan_name]" value="<%= params[:plan]%>">
+        <input type="hidden" id="user_submission_plan_name" name="user_submission[plan_name]" value="<%= plan_name %>">
 
         <div class="pt-8">
           <!-- First name -->
