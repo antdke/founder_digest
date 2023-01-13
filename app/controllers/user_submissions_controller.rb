@@ -5,11 +5,7 @@ class UserSubmissionsController < ApplicationController
     # create a UserSubmission record
     UserSubmission.create!(user_submission_params)
     # TODO: redirect to a thank you page
-    redirect_to root_path, notice: "Thanks for submitting!"
-  end
-
-  def update 
-    # TODO: update user submission status
+    redirect_to thanks_path, notice: "Thanks for submitting!"
   end
 
   private
