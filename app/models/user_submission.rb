@@ -20,8 +20,13 @@ class UserSubmission < ApplicationRecord
   end
 
   def accept!
-    UserSubmissionMailer.accept(self).deliver
-    # Create user account
+    password = generate_password
+    User.create!(email: self.email, password: password)
+    UserSubmissionMailer.accept(self, password).deliver
+  end
+
+  def generate_password
+    SecureRandom.hex(10)
   end
   
 end

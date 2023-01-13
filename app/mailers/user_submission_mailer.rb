@@ -1,7 +1,8 @@
 class UserSubmissionMailer < ApplicationMailer
   
-  def accept(user_submission)
-    
+  def accept(user_submission, password)
+    @password = password
+    @email = user_submission.email
     mail(to: user_submission.email, subject: "Welcome to Founder Digest — You've been approved!")
   end
   
